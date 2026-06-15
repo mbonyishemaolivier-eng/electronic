@@ -147,6 +147,14 @@ neresStore/
 ├── docker-compose.yml
 └── README.md
 ```
+![Homepage](exam/homena.png)
+![Homepage](exam/homeprodu.png)
+![product](exam/product.png)
+![Homepage](exam/produ.png)
+![AI](exam/ai inter.png)
+![Homepage](exam/homepage.png)
+
+
 
 ## CI/CD Pipeline
 
