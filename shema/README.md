@@ -147,13 +147,13 @@ neresStore/
 ├── docker-compose.yml
 └── README.md
 ```
-![Homepage](./exams/homena.png)
-![Homepage](./exams/homepr.png)
-![product](./exams/product.png)
+![Homepage](../exams/homena.png)
+![Homepage](../exams/homepr.png)
+![product](../exams/product.png)
 ![Homepage](./exams/produ.png)
-![AI](./exams/ai_inter.png)
-![analyse](./exams/analys.png)
-![admin](./exams/adminpro.png)
+![AI](../exams/ai_inter.png)
+![analyse](../exams/analys.png)
+![admin](../exams/adminpro.png)
 
 
 
