@@ -1,0 +1,50 @@
+services:
+  web:
+    build: .
+    container_name: neresstore-web
+    ports:
+      - "8080:80"
+    environment:
+      DB_HOST: db
+      DB_NAME: neresstore
+      DB_USER: neresuser
+      DB_PASS: nerespass
+      APP_URL: http://localhost:8080
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - .:/var/www/html
+    restart: unless-stopped
+    networks:
+      - neresstore-net
+
+  db:
+    image: mysql:8.0
+    container_name: neresstore-db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: neresstore
+      MYSQL_USER: neresuser
+      MYSQL_PASSWORD: nerespass
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-prootpass"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+    networks:
+      - neresstore-net
+
+volumes:
+  db_data:
+
+networks:
+  neresstore-net:
+    driver: bridge
