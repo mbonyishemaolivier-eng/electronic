@@ -8,7 +8,7 @@ A modern e-commerce web application for selling electronics in Rwanda. Built wit
 ## Live Demo
 
 - **Deployment URL:** https://orchid-dragonfly-827212.hostingersite.com/
-- **GitHub Repository:** Add your repository link here after pushing
+- **GitHub Repository:** https://github.com/mbonyishemaolivier-eng/electronic
 
 ## Features
 
